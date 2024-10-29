@@ -1,9 +1,20 @@
 import axios from "axios";
+import { Params } from "react-router-dom";
+import { PlaceData } from "../types";
+
+export const api = axios.create({ baseURL: "http://localhost:4001" });
 
 
-// base url'e sahip bir axios örneği oluşturduk
-const api = axios.create({ baseURL: "http://localhost:3000" });
+export const getPlaces = (params: Params) =>
+    api.get("/api/places", { params }).then((res) => res.data.places);
 
-// bütün konaklama yerlerini getiren fonk.
-export const getPlaces = () =>
-    api.get("/api/places",).then((res) => res.data.places);
+
+export const createPlace = (body: PlaceData) =>
+    api.post("/api/places", body);
+
+
+export const getPlace = (id: string) =>
+    api.get(`/api/place/${id}`).then((res) => res.data.place);
+
+
+export const deletePlace = (id: string) => api.delete(`/api/place/${id}`);

@@ -8,7 +8,8 @@ const Home = () => {
     return (
         <Container designs="my-5">
             <Hero />
-            <div className="grid grid-cols-1 lg:grid-cols-4 max-lg:mt-10 lg:gap-5">
+            <div className="grid grid-cols-1 lg:grid-cols-4
+             max-lg:mt-10 lg:gap-5">
                 <Filter />
                 <div className="lg:col-span-3">
                     <List />
