@@ -19,4 +19,6 @@ The **Hotels App** is a web application that allows users to find and list accom
 - **Tailwind CSS**: Utility-first CSS framework for responsive design.
 
 
+## GIF
+
 ![](otel.gif)
